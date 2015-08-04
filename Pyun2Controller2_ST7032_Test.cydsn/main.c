@@ -9,6 +9,8 @@
  *
  * ========================================
 */
+#define  _ADC_8BIT
+
 #include <project.h>
 #include <stdio.h>
 #include "ST7032.h"
