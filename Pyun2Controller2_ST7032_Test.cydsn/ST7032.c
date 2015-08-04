@@ -1,33 +1,5 @@
 #include "ST7032.h"
-
-/* I2C slave address to communicate with */
-#define I2C_LCD_ADDR	(0b0111110)
-
-/* Buffer and packet size */
-#define BUFFER_SIZE     (2u)
-#define PACKET_SIZE     (BUFFER_SIZE)
-
-/* Command valid status */
-#define TRANSFER_CMPLT    (0x00u)
-#define TRANSFER_ERROR    (0xFFu)
-
-/***************************************
-*               Macros
-****************************************/
-/* Set LED RED color */
-#define RGB_LED_ON_RED  \
-                do{     \
-                    LED_RED_Write  (0u); \
-                    LED_GREEN_Write(1u); \
-                }while(0)
-
-/* Set LED GREEN color */
-#define RGB_LED_ON_GREEN \
-                do{      \
-                    LED_RED_Write  (1u); \
-                    LED_GREEN_Write(0u); \
-                }while(0)
-					
+	
 /* 
  * contrast: LCDのコントラストの設定 [0.. 63]
  * 5V系:   10 程度

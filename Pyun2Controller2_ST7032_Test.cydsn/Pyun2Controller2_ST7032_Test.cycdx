@@ -1,33 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
-  <block name="SW4_D" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="Clock_4" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="Debouncer_5" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="SW5" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="not_5" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="SW4" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="Clock_3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="SW3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="SW3_D" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="not_4" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="Debouncer_4" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="Clock_5" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="not_7" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="Debouncer_7" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="SW1_7" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="SW7_D" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="Clock_7" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="SW6_D" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="Debouncer_6" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="SW5_D" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="SW4" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="SW4_D" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="Clock_4" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="not_3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="Debouncer_3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="SW3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="SW3_D" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="Clock_3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="not_6" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="Clock_6" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="Debouncer_6" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="SW6" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="POT2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="SW6_D" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="Clock_6" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="not_5" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="Debouncer_5" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="SW5" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="SW5_D" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="Clock_5" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="SW2_D" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="POT1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="POT3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="JOY2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="JOY1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="ADC_SAR_Seq" BASE="0x0" SIZE="0x0" desc="Sequencing SAR ADC" visible="true">
     <block name="cy_analog_noconnect_31" BASE="0x0" SIZE="0x0" desc="" visible="true" />
     <block name="cy_analog_noconnect_32" BASE="0x0" SIZE="0x0" desc="" visible="true" />
@@ -433,6 +427,9 @@
       <field name="WOUND_RESOLUTION" from="1" to="0" access="R" resetVal="" desc="Maximum SAR resolution allowed" />
     </register>
   </block>
+  <block name="POT2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="JOY1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="POT3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="LED_RED" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="I2CM" BASE="0x0" SIZE="0x0" desc="Serial Communication Block" visible="true">
     <block name="clock_VM" BASE="0x0" SIZE="0x0" desc="" visible="true" />
@@ -787,16 +784,14 @@
   <block name="LED_GREEN" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="LCD_RESET" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="LED_BLUE" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="Debouncer_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="Clock_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="SW2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="SW2_D" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="not_3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="Debouncer_3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="not_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="SW1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="Clock_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="Debouncer_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="SW1_D" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="not_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="Clock_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="SW2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="Debouncer_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="JOY2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="Clock_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="SW1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
 </blockRegMap>

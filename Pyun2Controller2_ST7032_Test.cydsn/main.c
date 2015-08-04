@@ -63,15 +63,18 @@ void pollingADC()
     adcResult[ADC_CH_JOY2_N] = ADC_LIMIT(ADC_SAR_Seq_GetResult16(ADC_CH_JOY2_N));
 }
 
-/*
 // Buttons
-void pollingButtons()
+void pollingSW()
 {
-	buttonStatus.green = BTN_GREEN_PIN_Read(); 
-
+    buttonStatus.green  = SW1_D_Read(); 
+    buttonStatus.yellow = SW2_D_Read(); 
+    buttonStatus.red    = SW3_D_Read(); 
+    buttonStatus.blue   = SW4_D_Read(); 
+    buttonStatus.black  = SW5_D_Read(); 
+    buttonStatus.white  = SW6_D_Read(); 
+    
     prevButtonStatus = buttonStatus;    
 }
-*/
 
 /*======================================================
  * メインルーチン 
@@ -109,17 +112,40 @@ int main()
     for(;;)
     {
         pollingADC();        
+        pollingSW();
         
-        sprintf(LCD_LINE, "%03x%03x%03x%03x%03x",
+#ifdef _ADC_8BIT
+        sprintf(LCD_LINE, "%02x %02x %02x : %02x %02x",
+            adcResult[ADC_CH_POT1_N] >> 3,
+            adcResult[ADC_CH_POT2_N] >> 3,
+            adcResult[ADC_CH_POT3_N] >> 3,
+            adcResult[ADC_CH_JOY1_N] >> 3,
+            adcResult[ADC_CH_JOY2_N] >> 3
+        );
+#else
+        sprintf(LCD_LINE, "%03x%03x%03x:%03x%03x",
             adcResult[ADC_CH_POT1_N],
             adcResult[ADC_CH_POT2_N],
             adcResult[ADC_CH_POT3_N],
             adcResult[ADC_CH_JOY1_N],
             adcResult[ADC_CH_JOY2_N]
         );
+#endif        
 
-        LCD_SetPos(0, 1);
+        LCD_SetPos(0, 0);
         LCD_Puts(LCD_LINE);
+        
+        sprintf(LCD_LINE, "%s %s %s %s : %s %s   ",
+            buttonStatus.green ? "G" : "x",
+            buttonStatus.yellow ? "Y" : "x",
+            buttonStatus.red ? "R" : "x",
+            buttonStatus.blue ? "B" : "x",
+            buttonStatus.black ? "K" : "x",
+            buttonStatus.white ? "W" : "x"
+        );            
+            
+        LCD_SetPos(0, 1);
+        LCD_Puts(LCD_LINE);        
         
         //CyDelay(1000);
     }
